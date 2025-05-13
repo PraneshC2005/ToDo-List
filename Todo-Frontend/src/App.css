@@ -1,0 +1,31 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.form input {
+  padding: 8px;
+  margin: 5px;
+  width: 200px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.todo-item {
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
