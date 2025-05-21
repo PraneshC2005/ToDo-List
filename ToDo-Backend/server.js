@@ -50,8 +50,8 @@ app.put('/todos/:id', async (req, res) => {
 try{
     const id= req.params.id;
     const { title, description } = req.body;
-    const updatedTodo = await Todo.findByIdAndUpdate
-    (id,
+    const updatedTodo = await Todo.findByIdAndUpdate(
+    id,
         {
             title,
             description
