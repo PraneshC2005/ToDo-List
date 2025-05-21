@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: todo-backend
+  namespace: default  # Explicit namespace
 spec:
   replicas: 1
   selector:
@@ -15,9 +16,15 @@ spec:
       containers:
       - name: todo-backend
         image: praneshc/todo-backend:latest
-        imagePullPolicy: Always
         ports:
         - containerPort: 3000
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
