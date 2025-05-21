@@ -15,6 +15,7 @@ spec:
       containers:
       - name: todo-backend
         image: praneshc/todo-backend:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
 ---
